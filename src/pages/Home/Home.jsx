@@ -1,27 +1,27 @@
-import Banner from '../../components/Banner'
-import Card from '../../components/Card'
-import data from '../../data/logements.json'
-import imageHome from '../../assets/home_banner.png'
+import Banner from '../../components/Banner/Banner'
+import Card from '../../components/Card/Card'
 import './Home.scss'
 
-const Home = () => {
+import data from '../../data/logements.json'
+import imageHome from '../../assets/home_banner.png'
+
+function Home () {
   return (
-    <section className="home-container">
+  <section className="home">
     <Banner image={imageHome} title="Chez vous, partout et ailleurs" />
-    <div className="cards-grid">
+    <div className="home__cards-grid">
     {data.map(logement => (
       <Card 
         key={logement.id} 
         id={logement.id} 
         title={logement.title} 
         cover={logement.cover} 
-        className="card"
       />
     ))}
-  </div>
-</section>
+    </div>
+  </section>
 )
 }
 
-export default Home;
+export default Home
  
