@@ -1,0 +1,28 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+:root {
+  font-family: $main-font;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-weight: 500;
+  color: $text-color;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+#root {
+  @include flex-column;
+  min-height: 100vh;
+}
+
+main {
+  @include container-main;
+}
