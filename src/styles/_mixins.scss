@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin container-main {
+  flex: 1;
+  width: 90%;
+  max-width: $max-width;
+  margin: 0 auto;
+}
