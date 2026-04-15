@@ -1,13 +1,15 @@
-import { useState } from 'react';
-import arrowLeft from '../assets/arrow_back.svg';
-import arrowRight from '../assets/arrow_forward.svg';
+import { useState } from 'react'
+import './Slideshow.scss'
+
+import arrowLeft from '../../assets/arrow_back.svg'
+import arrowRight from '../../assets/arrow_forward.svg'
 
 function Slideshow ({ pictures }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0)
   const total = pictures.length;
 
-  const nextSlide = () => setCurrentIndex(currentIndex === total - 1 ? 0 : currentIndex + 1);
-  const prevSlide = () => setCurrentIndex(currentIndex === 0 ? total - 1 : currentIndex - 1);
+  const nextSlide = () => setCurrentIndex(currentIndex === total - 1 ? 0 : currentIndex + 1)
+  const prevSlide = () => setCurrentIndex(currentIndex === 0 ? total - 1 : currentIndex - 1)
 
   return (
     <div className="slideshow">
@@ -27,7 +29,7 @@ function Slideshow ({ pictures }) {
         </>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Slideshow;
+export default Slideshow
