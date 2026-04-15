@@ -1,8 +1,8 @@
-import { Routes, Route } from 'react-router-dom'
-import Home from '../pages/Home/Home'
-import About from '../pages/About/About'
-import Accommodation from '../pages/Accommodation/Accommodation'
-import Error from '../pages/Error/Error'
+import { Routes, Route } from "react-router-dom";
+import Home from "../pages/Home/Home";
+import About from "../pages/About/About";
+import Accommodation from "../pages/Accommodation/Accommodation";
+import Error from "../pages/Error/Error";
 
 function AppRouter() {
   return (
@@ -12,7 +12,7 @@ function AppRouter() {
       <Route path="/accommodation/:id" element={<Accommodation />} />
       <Route path="*" element={<Error />} />
     </Routes>
-  )
+  );
 }
 
-export default AppRouter
+export default AppRouter;
