@@ -1,0 +1,67 @@
+@use '../../styles/variables' as *;
+
+.collapse {
+  width: 100%;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    }
+
+  &__title {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0;
+
+      @media (max-width: 768px) {
+      font-size: 13px;
+      }
+    }
+
+    &__arrow {
+      width: 24px;
+      transition: transform 0.3s ease-in-out; 
+
+      @media (max-width: 768px) {
+      width: 16px;
+      }
+
+      &--rotate {
+        transform: rotate(-180deg);
+      }
+    }
+
+  &__content {
+    background-color: $bg-grey;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    
+    &--hide {
+      max-height: 0;
+      transition: transform 1000ms linear;
+    }
+    
+    &--show {
+      max-height: 500px; 
+    }
+  }
+
+  &__text {
+    padding: 30px 20px 20px 20px; 
+    color: $text-color;
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 400;
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+      }
+  }
+}
