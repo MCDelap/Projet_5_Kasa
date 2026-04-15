@@ -1,24 +1,23 @@
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .home {
-
   &__cards-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;  
-  width: 100%; 
-  margin: 50px auto; 
-  background-color: $bg-grey;
-  padding: 50px;
-  border-radius: $main-radius;
-  box-sizing: border-box;
-  
-  @media (max-width: 768px) {
-  background-color: transparent;
-  padding: 0;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    margin: 50px auto;
+    background-color: $bg-grey;
+    padding: 50px;
+    border-radius: $main-radius;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+      background-color: transparent;
+      padding: 0;
+      gap: 20px;
+    }
   }
-} 
 }

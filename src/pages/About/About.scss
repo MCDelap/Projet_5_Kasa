@@ -1,5 +1,5 @@
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .about {
   @include flex-column;
@@ -10,13 +10,13 @@
   }
 
   &__collapses {
-    @include container-main; 
+    @include container-main;
     display: flex;
     flex-direction: column;
     gap: 20px;
 
-      @media (max-width: 768px) {
+    @media (max-width: 768px) {
       width: 100%;
-      }
     }
+  }
 }
