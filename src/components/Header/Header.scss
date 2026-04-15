@@ -1,3 +1,5 @@
+@use '../../styles/variables' as *;
+
 .header {
   display: flex;
   justify-content: space-between; 
@@ -9,11 +11,20 @@
 
   &__logo {
     height: 68px; 
+
+    @media (max-width: 768px) {
+      width: 145px;
+      height: auto;
+    }
   }
 
   &__nav {
     display: flex;
     gap: 57px;
+
+    @media (max-width: 768px) {
+      gap: 10px; 
+    }
   }
 
   &__nav-link {
@@ -21,6 +32,11 @@
     font-size: 24px;
     color: black;
     font-weight: 500; 
+
+    @media (max-width: 768px) {
+      font-size: 12px; 
+      text-transform: uppercase; 
+    }
 
     &:hover {
       text-decoration: underline;
